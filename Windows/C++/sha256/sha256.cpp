@@ -1,21 +1,21 @@
 namespace sha256 {
     
-    unsigned int f1(strint datas) {
+    void f1(strint datas) {
         
         
         
     };
-    unsigned int f2(string datas) {
+    void f2(string datas) {
         
         
         
     };
-    unsigned int f3(string datas) {
+    void f3(string datas) {
         
         
         
     };
-    unsigned int f4(string datas) {
+    void f4(string datas) {
         
         
         
