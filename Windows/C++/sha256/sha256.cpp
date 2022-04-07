@@ -29,7 +29,7 @@ namespace sha256 {
     };
     void f2(string datas) {
         
-        return ()
+        return (Math.ceil(datas / 16);)
         
     };
     void f3(string datas) {
