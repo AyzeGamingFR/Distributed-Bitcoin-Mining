@@ -24,7 +24,7 @@ namespace sha256 {
     
     void f1(strint datas) {
         
-        return ()
+        return (datas.length / 4 + 2)
         
     };
     void f2(string datas) {
