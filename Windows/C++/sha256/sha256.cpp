@@ -80,6 +80,16 @@ namespace sha256 {
     };
     void f5(string datas) {
         
+        for (let i = 0; i < N; i++) {
+            
+            M[i] = new Array(16);
+            for (let j = 0; j < 16; j++) { // encode 4 chars per integer (64 per block), big-endian encoding
+                
+                M[i][j] = (datas.charCodeAt(i * 64 + j * 4 + 0) << 24) | (datas.charCodeAt( i * 64 + j * 4 + 1) << 16) | (datas.charCodeAt(i * 64 + j * 4 + 2) << 8) | (datas.charCodeAt(i * 64 + j * 4 + 3) << 0);
+                
+            }
+            
+        }
         return ()
         
     };
