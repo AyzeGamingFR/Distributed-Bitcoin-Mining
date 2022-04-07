@@ -1,5 +1,41 @@
 namespace sha256 {
     
+    static ROTR(string n, string x) {
+        
+        return (x >>> n) | (x << (32 - n));
+        
+    };
+    static Σ0(string x) {
+        
+        return ROTR(2,  x) ^ ROTR(13, x) ^ ROTR(22, x);
+        
+    };
+    static Σ1(string x) {
+        
+        return ROTR(6,  x) ^ ROTR(11, x) ^ ROTR(25, x);
+        
+    };
+    static σ0(string x) {
+        
+        return ROTR(7,  x) ^ ROTR(18, x) ^ (x >>> 3);
+        
+    };
+    static σ1(string x) {
+        
+        return ROTR(17, x) ^ ROTR(19, x) ^ (x >>> 10);
+        
+    };
+    static Ch(string x, string y, string z)  { // 'choice'
+        
+        return (x & y) ^ (~x & z);
+        
+    };
+    static Maj(string x, string y, string z) { // 'majority'
+        
+        return (x & y) ^ (x & z) ^ (y & z);
+        
+    };
+    
     const defaults = { msgFormat: 'string', outFormat: 'hex' };
     const opt = Object.assign(defaults, options);
     switch (opt.msgFormat) {
