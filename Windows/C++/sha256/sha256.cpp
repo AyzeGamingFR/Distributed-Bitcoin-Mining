@@ -34,7 +34,7 @@ namespace sha256 {
     };
     void f3(string datas) {
         
-        return ()
+        return (new Array(datas))
         
     };
     void f4(string datas) {
