@@ -1,0 +1,5 @@
+namespace config {
+    
+    string servers = [];
+    
+};
