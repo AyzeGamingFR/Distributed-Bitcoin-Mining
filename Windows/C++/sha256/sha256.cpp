@@ -75,6 +75,11 @@ namespace sha256 {
     };
     void f4(string datas) {
         
+        return (datas += String.fromCharCode(0x80))
+        
+    };
+    void f5(string datas) {
+        
         return ()
         
     };
