@@ -1,0 +1,3 @@
+The Distributed Bitcoin Mining code os under the copyrights of AyzeLYC#0666 ( AyzeGamingFR on github ).
+
+You can use this source code for some open source and free projects but not for some lucrative projects.
