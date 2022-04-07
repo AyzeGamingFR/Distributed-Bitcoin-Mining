@@ -1,6 +1,6 @@
 namespace config {
     
+    bool testHashrate = true;
     string servers = [];
-    unsigned int testHashrate = 1;
     
 };
