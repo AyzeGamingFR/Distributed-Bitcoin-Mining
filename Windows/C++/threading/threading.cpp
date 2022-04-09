@@ -9,9 +9,10 @@ namespace threading {
     
     void createThread(void work) {
         
-        string threadname = thread + threads;
+        string threadname = "thread" + threads;
         
         std::thread threadname (work);
+        return (threadname.join())
         
     };
     
