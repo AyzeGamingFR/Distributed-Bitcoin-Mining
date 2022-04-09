@@ -1,19 +1,17 @@
 #include <iostream>
 #include <string>
+#include <thread>
 #include <windows.h>
 
 namespace threading {
     
-    string threads = {};
+    unsigned int threads = 0;
     
-    void createThread() {
+    void createThread(void work) {
         
+        string threadname = thread + threads;
         
-        
-    };
-    void addWork(unsigned int threadId,void work) {
-        
-        
+        std::thread threadname (work);
         
     };
     
