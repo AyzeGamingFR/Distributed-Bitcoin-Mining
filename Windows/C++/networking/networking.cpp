@@ -2,10 +2,10 @@
 
 namespace networking {
     
-    void tcpClient,
-         tcpServer;
+    unsigned short tcpClient,
+                   tcpServer;
     
-    void startTcp(unsigned int sockets, unsigned int serverport) {
+    unsigned int startTcp(unsigned int sockets, unsigned short serverport) {
         
         if (sockets <= 20) {
             
