@@ -9,22 +9,22 @@ namespace networking {
         
         if (sockets <= 20) {
             
-            for (i < sockets, i += 1) {
+            for (i < 20, i += 1) {
                 
                 tcpClient[i + 1] = new socket(AF_INET, SOCK_STREAM, 0);
                 
             }
-            for (i < sockets, i += 1) {
+            for (i < 20, i += 1) {
                 
                 tcpServer[i + 1] = new socket(AF_INET, SOCK_STREAM, 0);
                 
             }
-            for (i < sockets, i += 1) {
+            for (i < 20, i += 1) {
                 
                 bind(tcpServer[i + 1], (sockaddr*) &addr, sizeof(addr));
                 
             }
-            for (i < sockets, i += 1) {
+            for (i < 20, i += 1) {
                 
                 tcpServer[i + 1].listen(serverport);
                 
