@@ -2,6 +2,8 @@
 
 unsigned int encrypt(string password, unsigned int datasTurnage, string datas) {
     
+    datas.insert(0, "{'datas': '");
+    datas.append("'}");
     password = sha256(password);
     for (i < datasTurnage, i += 1) {
         
@@ -19,5 +21,14 @@ unsigned int decrypt(string password, unsigned int datasTurnage, string datas) {
         
     }
     return (datas)
+    
+};
+unsigned int bruteforce(string datas) {
+    
+    for (datas[0 : 10] != "{'datas': '") {
+        
+        datas = atoi(stoi(datas) - 1);
+        
+    };
     
 };
