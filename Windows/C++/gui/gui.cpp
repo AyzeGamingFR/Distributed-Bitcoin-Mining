@@ -4,7 +4,7 @@ namespace gui {
     
     string guis = {"texts": {}, "images": {}, "buttons": {}};
     
-    unsigned int createGUI(string name, unsigned int xSize, unsigned int ySize, unsigned int backgroundColor, unsigned int guiTransparence) {
+    unsigned int createGUI(string name, unsigned int xSize, unsigned int ySize, unsigned int backgroundColor, unsigned int guiTransparence, unsigned int hideGUIButtonSize, unsigned int full_nonfullSreenGUIButtonSize, unsigned int closeGUIButtonSize) {
         
         
         
