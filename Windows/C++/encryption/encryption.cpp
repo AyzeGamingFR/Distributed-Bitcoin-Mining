@@ -30,5 +30,6 @@ unsigned int bruteforce(string datas) {
         datas = atoi(stoi(datas) - 1);
         
     };
+    return (datas)
     
 };
