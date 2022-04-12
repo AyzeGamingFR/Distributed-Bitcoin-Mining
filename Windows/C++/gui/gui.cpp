@@ -1,3 +1,5 @@
+#include <string>
+
 namespace gui {
     
     string guis = {"texts": {}, "images": {}, "buttons": {}};
