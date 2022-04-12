@@ -11,22 +11,22 @@ namespace networking {
             
             for (i < 20, i += 1) {
                 
-                tcpClient[i + 1] = new socket(AF_INET, SOCK_STREAM, 0);
+                tcpClient[i] = new socket(AF_INET, SOCK_STREAM, 0);
                 
             }
             for (i < 20, i += 1) {
                 
-                tcpServer[i + 1] = new socket(AF_INET, SOCK_STREAM, 0);
+                tcpServer[i] = new socket(AF_INET, SOCK_STREAM, 0);
                 
             }
             for (i < 20, i += 1) {
                 
-                bind(tcpServer[i + 1], (sockaddr*) &addr, sizeof(addr));
+                bind(tcpServer[i], (sockaddr*) &addr, sizeof(addr));
                 
             }
             for (i < 20, i += 1) {
                 
-                tcpServer[i + 1].listen(serverport);
+                tcpServer[i].listen(serverport);
                 
             }
             
@@ -34,22 +34,22 @@ namespace networking {
             
             for (i < sockets, i += 1) {
                 
-                tcpClient[i + 1] = new socket(AF_INET, SOCK_STREAM, 0);
+                tcpClient[i] = new socket(AF_INET, SOCK_STREAM, 0);
                 
             }
             for (i < sockets, i += 1) {
                 
-                tcpServer[i + 1] = new socket(AF_INET, SOCK_STREAM, 0);
+                tcpServer[i] = new socket(AF_INET, SOCK_STREAM, 0);
                 
             }
             for (i < sockets, i += 1) {
                 
-                bind(tcpServer[i + 1], (sockaddr*) &addr, sizeof(addr));
+                bind(tcpServer[i], (sockaddr*) &addr, sizeof(addr));
                 
             }
             for (i < sockets, i += 1) {
                 
-                tcpServer[i + 1].listen(serverport);
+                tcpServer[i].listen(serverport);
                 
             }
             
