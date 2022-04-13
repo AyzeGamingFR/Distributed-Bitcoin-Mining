@@ -7,7 +7,7 @@ namespace threading {
     
     unsigned int threads = 0;
     
-    void createThread(string work) {
+    unsigned int createThread(unsigned int work) {
         
         string threadname = "thread" + threads;
         
