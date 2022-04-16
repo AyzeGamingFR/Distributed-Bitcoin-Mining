@@ -1,0 +1,5 @@
+fn threading(fn work) {
+    
+    
+    
+};
