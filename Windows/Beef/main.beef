@@ -1,5 +1,17 @@
 class main {
     
+    start();
     
+};
+
+public static void start() {
+    
+    threading.start();
+    
+};
+public static void stop() {
+    
+    internet.stop();
+    threading.stop();
     
 };
