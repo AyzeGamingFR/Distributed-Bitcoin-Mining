@@ -1,8 +1,10 @@
 public static void sha256(var datas) { // bitcoin block maximum size
     
-    if (datas.length > 7500080) { // 80 bytes ( block headers ) + 50 transactions per second during 10 minutes with a normal size of 250 bytes per transaction
+    if (sizeof(datas) <= 7500080) { // 80 bytes ( block headers ) + 50 transactions per second during 10 minutes with a normal size of 250 bytes per transaction
         
+        String hash = "";
         
+        return (hash)
         
     };
     
