@@ -59,7 +59,6 @@ unsigned int cuda(string inputdatas, unsigned int zerosNeeded, unsigned int work
     // run the hashing function in the gpu
     hashDatas<<<128, sizeof(datas) / sizeof(int)>>>(datas, zerosNeeded, wtd);
     
-    
     // get the work done by the gpu
     cudaMemcpy(endingDatas, hash, sizeof(hash), cuaMemcpyDeviceToHost); // ending point of the datas, source of the datas, size
     
