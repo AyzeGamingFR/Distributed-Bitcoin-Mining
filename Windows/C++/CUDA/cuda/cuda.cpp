@@ -52,7 +52,7 @@ unsigned int getCoresCount() {
                 
             };
             
-        case 8:
+        case 8: // Ampere GPU Architecture
             
             if (devProp.minor == 0) {
                 
@@ -64,6 +64,10 @@ unsigned int getCoresCount() {
                 return (devProp.multiProcessorCount * 128)
                 
             };
+            
+        case 9: // ADA Lovelace GPU Architecture
+            
+            return (devProp.multiProcessorCount)
             
     };
     
