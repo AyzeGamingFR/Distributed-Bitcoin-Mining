@@ -6,7 +6,7 @@
 
 string* parameters = ["cuda_cores": devProp.multiProcessorCount, "hashing_algorithm": "sha256"];
 
-__global__ void hashDatas(string* datas, unsigned int* zn, string* hashing_algorithm) {
+__global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashing_algorithm) {
     
     if (hashing_algorithm == "argon2") {
         
