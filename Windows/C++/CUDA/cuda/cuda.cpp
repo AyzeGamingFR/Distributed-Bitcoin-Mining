@@ -13,7 +13,7 @@ __global__ void hashDatas(string* datas, unsigned int* zn, string* hashing_algor
         string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            argon2.hash(datas);
+            argon2.hash(datas + str(nonce));
             
         };
         return (hash)
@@ -22,60 +22,110 @@ __global__ void hashDatas(string* datas, unsigned int* zn, string* hashing_algor
     if (hashing_algorithm == "c11") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            c11.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
     if (hashing_algorithm == "scrypt") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            scrypt.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
     if (hashing_algorithm == "sha256") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            sha256.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
     if (hashing_algorithm == "sha512") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            sha512.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
     if (hashing_algorithm == "sonoa") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            sonoa.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
     if (hashing_algorithm == "x11") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            x11.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
     if (hashing_algorithm == "x12") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            x12.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
     if (hashing_algorithm == "x16") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            x16.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
     if (hashing_algorithm == "x16r") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            x16r.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
     if (hashing_algorithm == "x16s") {
         
         string* hash;
+        for (hash[0 : zn - 1] != "0") {
+            
+            x16s.hash(datas + str(nonce));
+            
+        };
         return (hash)
         
     };
