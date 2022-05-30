@@ -4,74 +4,7 @@
 #include "cuda_runtime_api.h"
 #include "device_launch_parameters.h"
 
-string* parameters = ["cuda_cores": getCoresCount, "hashing_algorithm": "sha256"];
-
-unsigned int getCoresCount() {
-    
-    switch(devProp.major) {
-        
-        case 2: // Fermi GPU Architecture
-            
-            if (devProp.minor == 1) {
-                
-                return (devProp.multiProcessorCount * 48)
-                
-            } else {
-                
-                return (devProp.multiProcessorCount * 32)
-                
-            }
-        case 3: // Kepler GPU Architecture
-            
-            return (devProp.multiProcessorCount * 192)
-            
-            
-        case 5: // Maxwell GPU Architecture
-            
-            return (devProp.multiProcessorCount * 128)
-            
-            
-        case 6: // Pascal GPU Architecture
-            
-            if (devProp.minor == 0) {
-                
-                return (devProp.multiProcessorCount * 64)
-                
-            };
-            if (devProp.minor == 1 || devProp.minor == 2) {
-                
-                return (devProp.multiProcessorCount * 128)
-                
-            };
-            
-        case 7: // Volta and Turing GPU Architectures
-            
-            if (devProp.minor == 0 || devProp.minor == 5) {
-                
-                return (devProp.multiProcessorCount * 64)
-                
-            };
-            
-        case 8: // Ampere GPU Architecture
-            
-            if (devProp.minor == 0) {
-                
-                return (devProp.multiProcessorCount * 64)
-                
-            };
-            if (devProp.minor == 6) {
-                
-                return (devProp.multiProcessorCount * 128)
-                
-            };
-            
-        case 9: // ADA Lovelace GPU Architecture
-            
-            return (devProp.multiProcessorCount)
-            
-    };
-    
-};
+string* parameters = ["cuda_cores": devProp.multiProcessorCount, "hashing_algorithm": "sha256"];
 
 __global__ void hashDatas(string* datas, unsigned int* zn, string* hashing_algorithm) {
     
