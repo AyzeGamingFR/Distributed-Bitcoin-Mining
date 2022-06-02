@@ -45,8 +45,8 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
             
         };
         
-        s[0] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
-        s[1] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
+        #define s0(x) (((x) >> 1) ^ T((x) << 3) \^ ROTL(x,  4) ^ ROTL(x, 19))
+        #define s1(x) (((x) >> 1) ^ T((x) << 2) \^ ROTL(x,  8) ^ ROTL(x, 23))
         s[2] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
         s[3] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
         s[4] = SHR(datas) + datas;
