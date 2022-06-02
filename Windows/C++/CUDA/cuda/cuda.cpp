@@ -19,6 +19,46 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
         return (hash)
         
     };
+    if (hashing_algorithm == "bmw224" || hashing_algorithm == "bmw256") {
+        
+        string* s = [];
+        string* f = [];
+        
+        unsigned int* SHR(unsigned int* datas) {
+            
+            
+            
+        };
+        unsigned int* SHL(unsigned int* datas) {
+            
+            
+            
+        };
+        unsigned int* ROTL(unsigned int* datas) {
+            
+            
+            
+        };
+        unsigned int* XOR(unsigned int* datas) {
+            
+            
+            
+        };
+        
+        s[0] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
+        s[1] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
+        s[2] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
+        s[3] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
+        s[4] = SHR(datas) + datas;
+        s[5] = SHR(datas) + datas;
+        
+    };
+    if (hashing_algorithm == "bmw384" || hashing_algorithm == "bmw512") {
+        
+        string* s = [];
+        string* f = [];
+        
+    };
     if (hashing_algorithm == "c11") {
         
         string* hash;
