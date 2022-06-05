@@ -6,76 +6,152 @@
 
 string* parameters = ["cuda_cores": devProp.multiProcessorCount, "hashing_algorithm": "sha256"];
 
+__global__ unsigned int argon2(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int bmw224(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int bmw384(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int c11(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int cubehash(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int scrypt(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int sha256(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int sha512(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int sonoa(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int x11(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int x12(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int x16(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int x16s(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+__global__ unsigned int x16r(string* datas) {
+    
+    string* result;
+    
+    return (result)
+    
+};
+
 __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashing_algorithm) {
+    
+    string* hash;
     
     if (hashing_algorithm == "argon2") {
         
-        string* hash;
-        for (hash[0 : zn - 1] != "0") {
-            
-            argon2.hash(datas + str(nonce));
-            
-        };
-        return (hash)
+        hash = argon2(datas + str(nonce));
         
     };
     if (hashing_algorithm == "bmw224" || hashing_algorithm == "bmw256") {
         
-        string* s = [];
-        string* f = [];
-        
-        unsigned int* SHR(unsigned int* datas) {
-            
-            
-            
-        };
-        unsigned int* SHL(unsigned int* datas) {
-            
-            
-            
-        };
-        unsigned int* ROTL(unsigned int* datas) {
-            
-            
-            
-        };
-        unsigned int* XOR(unsigned int* datas) {
-            
-            
-            
-        };
-        
-        #define s0(x) (((x) >> 1) ^ T((x) << 3) \^ ROTL(x,  4) ^ ROTL(x, 19))
-        #define s1(x) (((x) >> 1) ^ T((x) << 2) \^ ROTL(x,  8) ^ ROTL(x, 23))
-        s[2] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
-        s[3] = SHR(datas) + SHL(datas) + ROTL(datas) + ROTL(datas);
-        s[4] = SHR(datas) + datas;
-        s[5] = SHR(datas) + datas;
+        hash = bmw224(datas + str(nonce));
         
     };
     if (hashing_algorithm == "bmw384" || hashing_algorithm == "bmw512") {
         
-        string* s = [];
-        string* f = [];
+       for (hash[0 : zn - 1] != "0") {
+           
+           hash = bmw384(datas + str(nonce));
+           
+       };
         
     };
     if (hashing_algorithm == "c11") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            c11.hash(datas + str(nonce));
+            hash = c11(datas + str(nonce));
             
         };
         return (hash)
         
     };
-    if (hashing_algorithm == "scrypt") {
+    if (hashing_algorithm == "cubehash") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            scrypt.hash(datas + str(nonce));
+            hash = cubehash(datas + str(nonce));
+            
+        };
+        
+    };
+    if (hashing_algorithm == "scrypt") {
+        
+        for (hash[0 : zn - 1] != "0") {
+            
+            hash = scrypt(datas + str(nonce));
             
         };
         return (hash)
@@ -83,10 +159,9 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
     };
     if (hashing_algorithm == "sha256") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            sha256.hash(datas + str(nonce));
+            hash = sha256(datas + str(nonce));
             
         };
         return (hash)
@@ -94,10 +169,9 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
     };
     if (hashing_algorithm == "sha512") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            sha512.hash(datas + str(nonce));
+            hash = sha512(datas + str(nonce));
             
         };
         return (hash)
@@ -105,10 +179,9 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
     };
     if (hashing_algorithm == "sonoa") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            sonoa.hash(datas + str(nonce));
+            hash = sonoa(datas + str(nonce));
             
         };
         return (hash)
@@ -116,10 +189,9 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
     };
     if (hashing_algorithm == "x11") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            x11.hash(datas + str(nonce));
+            hash = x11(datas + str(nonce));
             
         };
         return (hash)
@@ -127,10 +199,9 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
     };
     if (hashing_algorithm == "x12") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            x12.hash(datas + str(nonce));
+            hash = x12(datas + str(nonce));
             
         };
         return (hash)
@@ -138,10 +209,9 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
     };
     if (hashing_algorithm == "x16") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            x16.hash(datas + str(nonce));
+            hash = x16(datas + str(nonce));
             
         };
         return (hash)
@@ -149,10 +219,9 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
     };
     if (hashing_algorithm == "x16r") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            x16r.hash(datas + str(nonce));
+            hash = x16r(datas + str(nonce));
             
         };
         return (hash)
@@ -160,10 +229,9 @@ __global__ unsigned int hashDatas(string* datas, unsigned int* zn, string* hashi
     };
     if (hashing_algorithm == "x16s") {
         
-        string* hash;
         for (hash[0 : zn - 1] != "0") {
             
-            x16s.hash(datas + str(nonce));
+            hash = x16s(datas + str(nonce));
             
         };
         return (hash)
